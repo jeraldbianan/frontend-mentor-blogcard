@@ -1,5 +1,156 @@
-root {
+@import url("fonts.css");
+
+:root {
   --color-primary: #f4d04e;
   --color-gray-950: #111111;
   --color-gray-500: #6b6b6b;
+  --line-height-300: 300%;
+  --line-height-150: 150%;
+  --line-height-100: 100%;
+  --line-height-50: 50%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary);
+  font-family: "Figtree", sans-serif;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0 24px;
+}
+
+article {
+  background-color: #fff;
+  max-width: 327px;
+  width: 100%;
+  padding: 24px;
+  border: 1px solid var(--color-gray-950);
+  border-radius: 20px;
+  box-shadow: 8px 8px 0 0 rgba(0, 0, 0, 1);
+}
+
+article img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.card-content {
+  margin-top: 24px;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+}
+
+.tags span {
+  background-color: var(--color-primary);
+  color: var(--color-gray-950);
+  padding: 4px 12px;
+  font-weight: 800;
+  font-size: 0.75rem;
+  line-height: var(--line-height-150);
+  border-radius: 4px;
+  color: var(--color-gray-950);
+}
+
+.time {
+  margin-top: 12px;
+}
+
+.time time {
+  line-height: var(--line-height-150);
+  font-size: 0.75rem;
+  color: var(--color-gray-950);
+}
+
+.card-content h2 {
+  margin-top: 12px;
+  font-size: 1.25rem;
+  line-height: var(--line-height-150);
+}
+
+.card-content h2 a {
+  color: var(--color-gray-950);
+  text-decoration: none;
+}
+
+.card-content h2 a:hover,
+.card-content h2 a:active {
+  color: var(--color-primary);
+}
+
+.card-content p {
+  margin-top: 12px;
+  font-size: 0.875rem;
+  line-height: var(--line-height-150);
+  color: var(--color-gray-500);
+}
+
+.card-content .author {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-content .author img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.author-info h3 {
+  font-size: 0.875rem;
+  line-height: var(--line-height-150);
+  color: var(--color-gray-950);
+  font-weight: 800;
+}
+
+footer {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}
+
+footer a {
+  color: var(--color-gray-950);
+  text-decoration: none;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: 0 auto;
+  }
+
+  .tags span {
+    font-size: 0.875rem;
+  }
+
+  .time time {
+    font-size: 0.875rem;
+  }
+
+  .card-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .card-content p {
+    font-size: 1rem;
+  }
+
+  article {
+    max-width: 384px;
+  }
 }
